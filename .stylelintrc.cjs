@@ -1,7 +1,8 @@
 module.exports = {
-    extends: ['stylelint-config-recommended', 'stylelint-config-clean-order', 'stylelint-config-css-modules'],
+    extends: ['stylelint-config-standard', 'stylelint-config-clean-order', 'stylelint-prettier'],
     rules: {
-        'custom-property-pattern': null,
+        'custom-property-pattern': 'null',
+        'custom-property-empty-line-before': 'null',
         'property-no-unknown': [
             true,
             {

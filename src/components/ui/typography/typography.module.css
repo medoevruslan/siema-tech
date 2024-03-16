@@ -1,0 +1,49 @@
+/*line-height*/
+.headline, .option, .button, .question, .link1, .link2 {
+    line-height: var(--line-height-m);
+}
+
+/*font weight*/
+.headline, .button, .question {
+    font-weight: var(--font-weight-bold);
+}
+
+.option, .link1, .link2 {
+    font-weight: var(--font-weight-regular);
+}
+
+/*color*/
+.link1, .link2 {
+    color: var(--color-info-120);
+}
+
+
+/*font size*/
+.question {
+    font-size: var(--font-size-l);
+
+    &.mobile {
+        font-size: var(--font-size-xxl);
+    }
+}
+
+.headline {
+    font-size: var(--font-size-xxl);
+
+    &.mobile {
+        font-size: var(--font-size-xxxl)
+    }
+}
+
+.button, .option {
+    font-size: var(--font-size-s);
+
+    &.moblie {
+        font-size: var(--font-size-xl);
+    }
+}
+
+.link1, .link2 {
+    font-size: var(--font-size-m);
+}
+
