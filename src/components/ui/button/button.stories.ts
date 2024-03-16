@@ -14,6 +14,6 @@ export default meta
 export const ButtonDefault: Story = {
   args: {
     children: 'Button',
-    variant: 'primary'
-  }
+    variant: 'primary',
+  },
 }

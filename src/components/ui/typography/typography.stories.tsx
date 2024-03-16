@@ -1,24 +1,19 @@
-import {Typography} from "@/components/ui/typography/typography";
-import {Meta, StoryObj} from "@storybook/react";
+import { Typography } from '@/components/ui/typography/typography'
+import { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  component: Typography,
   argTypes: {
-    variant: {
-      control: {type: 'radio'},
-      options: [
-        'option',
-        'question',
-        'headline',
-        'button',
-      ],
-    },
     mobile: {
       control: 'boolean',
-    }
+    },
+    variant: {
+      control: { type: 'radio' },
+      options: ['option', 'question', 'headline', 'button'],
+    },
   },
+  component: Typography,
+  tags: ['autodocs'],
   title: 'Components/Typography',
-  tags: ['autodocs']
 } satisfies Meta<typeof Typography>
 
 export default meta
@@ -53,39 +48,37 @@ export const Quesion: Story = {
   },
 }
 
-
 export const QuesionMobile: Story = {
   args: {
     children: 'Question Typography',
+    mobile: true,
     variant: 'question',
-    mobile: true
   },
 }
 
 export const HeadlineMobile: Story = {
   args: {
     children: 'Headline Typography',
+    mobile: true,
     variant: 'headline',
-    mobile: true
   },
 }
 
 export const ButtonMobile: Story = {
   args: {
     children: 'Button Typography',
+    mobile: true,
     variant: 'button',
-    mobile: true
   },
 }
 
 export const OptionMobile: Story = {
   args: {
     children: 'Option Typography',
+    mobile: true,
     variant: 'option',
-    mobile: true
   },
 }
-
 
 export const Link1: Story = {
   args: {

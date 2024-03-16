@@ -16,5 +16,9 @@ export const Button = <T extends ElementType = 'button'>(
 ) => {
   const { as: Component = 'button', children, classname, fullwidth, variant } = props
 
-  return <Component className={clsx(s.button, fullwidth && s.fullwidth, s[variant], classname)}>{children}</Component>
+  return (
+    <Component className={clsx(s.button, fullwidth && s.fullwidth, s[variant], classname)}>
+      {children}
+    </Component>
+  )
 }

@@ -1,0 +1,75 @@
+.question {
+    position: relative;
+    width: 373px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+
+    & svg {
+        cursor: pointer;
+        fill: transparent;
+        color: var(--color-black-40);
+    }
+
+    &.selected {
+        svg {
+            fill: var(--color-orange-5);
+            color: var(--color-orange-100);
+        }
+        &:after, &:before {
+            background-color: var(--color-orange-100);;
+        }
+    }
+    &.correct  {
+        svg {
+            fill: var(--color-green-5);
+            color: var(--color-green-100);
+        }
+        &:after, &:before {
+            background-color: var(--color-green-100);
+        }
+    }
+    &.wrong  {
+        svg {
+            fill: var(--color-red-5);
+            color: var(--color-red-100);
+        }
+        &:after, &:before {
+            background-color: var(--color-red-100);
+        }
+    }
+    &:after{
+        content: '';
+        width: 17px;
+        height: 1px;
+        position: absolute;
+        left: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--color-black-40);
+    }
+    &:before{
+        content: '';
+        width: 17px;
+        height: 1px;
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--color-black-40);
+    }
+
+    &:hover {
+        svg {
+            color: var(--color-blue-80);
+        }
+        &:before, &:after {
+            background-color: var(--color-blue-80);;
+        }
+    }
+}
+
+.text {
+    position: absolute;
+    left: 40px;
+}
