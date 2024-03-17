@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button'
+import { Home } from '@/page/home'
 
 function App() {
-  return <Button variant={'primary'}>Button</Button>
+  return <Home />
 }
 
 export default App

@@ -3,6 +3,12 @@ import { Typography } from '@/components/ui/typography'
 import { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
+  argTypes: {
+    variant: {
+      control: { type: 'radio' },
+      options: ['correct', 'wrong', 'selected'],
+    },
+  },
   component: AnswerOption,
   tags: ['autodocs'],
   title: 'Components/AnswerOption',

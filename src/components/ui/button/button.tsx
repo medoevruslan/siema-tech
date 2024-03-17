@@ -14,10 +14,13 @@ export type ButtonProps<T extends ElementType = 'button'> = {
 export const Button = <T extends ElementType = 'button'>(
   props: ButtonProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>
 ) => {
-  const { as: Component = 'button', children, classname, fullwidth, variant } = props
+  const { as: Component = 'button', children, classname, fullwidth, variant, ...rest } = props
 
   return (
-    <Component className={clsx(s.button, fullwidth && s.fullwidth, s[variant], classname)}>
+    <Component
+      className={clsx(s.button, fullwidth && s.fullwidth, s[variant], classname)}
+      {...rest}
+    >
       {children}
     </Component>
   )

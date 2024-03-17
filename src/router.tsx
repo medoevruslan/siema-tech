@@ -1,11 +1,15 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import { Game } from '@/page/game'
+import { Home } from './page/home'
 
 const publicRoutes = [
   {
-    element: <Game />,
+    element: <Home />,
     path: '/',
+  },
+  {
+    element: <Game />,
+    path: '/game',
   },
 ]
 
