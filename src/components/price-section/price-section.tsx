@@ -1,17 +1,29 @@
 import { OptionContainer } from '@/components/option-container/option-container'
+import clsx from 'clsx'
 
 import s from './price-section.module.css'
 
-type Props = {
-  prices: number[]
+type Price = {
+  completed: boolean
+  id: string
+  value: number
 }
-export const PriceSection = ({ prices }: Props) => {
+
+type Props = {
+  currentOptionId: string
+  prices: Price[]
+}
+export const PriceSection = ({ currentOptionId, prices }: Props) => {
   return (
     <div className={s.container}>
       {prices.length &&
-        prices.map(price => (
-          <OptionContainer className={s.price} key={price} textClassName={s.text}>
-            ${price.toLocaleString('en-US')}
+        prices.map(({ completed, id, value }) => (
+          <OptionContainer
+            className={clsx(s.price, completed && s.completed, currentOptionId === id && s.active)}
+            key={value}
+            textClassName={s.text}
+          >
+            ${value.toLocaleString('en-US')}
           </OptionContainer>
         ))}
     </div>

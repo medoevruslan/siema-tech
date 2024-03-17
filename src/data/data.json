@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "question": "What is the capital of France?",
     "answers": {
       "a": "London",
@@ -8,9 +9,11 @@
       "d": "Rome"
     },
     "correct": "b",
-    "price": "500"
+    "price": 500,
+    "completed": false
   },
   {
+    "id": "2",
     "question": "Which planet is known as the Red Planet?",
     "answers": {
       "a": "Mars",
@@ -19,9 +22,11 @@
       "d": "Jupiter"
     },
     "correct": "a",
-    "price": "1000"
+    "price": 1000,
+    "completed": false
   },
   {
+    "id": "3",
     "question": "What is the chemical symbol for water?",
     "answers": {
       "a": "H2O",
@@ -30,9 +35,11 @@
       "d": "O2"
     },
     "correct": "a",
-    "price": "2000"
+    "price": 2000,
+    "completed": false
   },
   {
+    "id": "4",
     "question": "Who wrote 'Romeo and Juliet'?",
     "answers": {
       "a": "William Shakespeare",
@@ -41,9 +48,11 @@
       "d": "Leo Tolstoy"
     },
     "correct": "a",
-    "price": "4000"
+    "price": 4000,
+    "completed": false
   },
   {
+    "id": "5",
     "question": "Which is the largest mammal?",
     "answers": {
       "a": "Elephant",
@@ -52,9 +61,11 @@
       "d": "Hippopotamus"
     },
     "correct": "b",
-    "price": "8000"
+    "price": 8000,
+    "completed": false
   },
   {
+    "id": "6",
     "question": "What is the symbol for the chemical element gold?",
     "answers": {
       "a": "G",
@@ -63,9 +74,11 @@
       "d": "Go"
     },
     "correct": "b",
-    "price": "16000"
+    "price": 16000,
+    "completed": false
   },
   {
+    "id": "7",
     "question": "Who painted the Mona Lisa?",
     "answers": {
       "a": "Leonardo da Vinci",
@@ -74,9 +87,11 @@
       "d": "Michelangelo"
     },
     "correct": "a",
-    "price": "32000"
+    "price": 32000,
+    "completed": false
   },
   {
+    "id": "8",
     "question": "What is the tallest mountain in the world?",
     "answers": {
       "a": "Mount Everest",
@@ -85,9 +100,11 @@
       "d": "Makalu"
     },
     "correct": "a",
-    "price": "64000"
+    "price": 64000,
+    "completed": false
   },
   {
+    "id": "9",
     "question": "Who is known as the father of modern physics?",
     "answers": {
       "a": "Isaac Newton",
@@ -96,9 +113,11 @@
       "d": "Niels Bohr"
     },
     "correct": "b",
-    "price": "125000"
+    "price": 125000,
+    "completed": false
   },
   {
+    "id": "10",
     "question": "What is the largest ocean on Earth?",
     "answers": {
       "a": "Atlantic Ocean",
@@ -107,9 +126,11 @@
       "d": "Pacific Ocean"
     },
     "correct": "d",
-    "price": "250000"
+    "price": 250000,
+    "completed": false
   },
   {
+    "id": "11",
     "question": "Who wrote 'To Kill a Mockingbird'?",
     "answers": {
       "a": "Ernest Hemingway",
@@ -118,9 +139,11 @@
       "d": "J.K. Rowling"
     },
     "correct": "c",
-    "price": "500000"
+    "price": 500000,
+    "completed": false
   },
   {
+    "id": "12",
     "question": "Which country is known as the Land of the Rising Sun?",
     "answers": {
       "a": "China",
@@ -129,7 +152,8 @@
       "d": "Vietnam"
     },
     "correct": "b",
-    "price": "1000000"
+    "price": 1000000,
+    "completed": false
   }
 ]
 

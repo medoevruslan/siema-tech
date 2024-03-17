@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import { Outlet, useOutletContext } from 'react-router-dom'
 
+import { Quiz, getQuiz } from '@/data/getQuiz'
+
 type GameContextProps = {
   isGameEnded: boolean
   isGameStarted: boolean
   isWin: boolean
-  setIsGameEnded?: (value: boolean) => void
-  setIsGameStarted?: (value: boolean) => void
-  setIsWin?: (value: boolean) => void
-  setStep?: (values: number) => void
+  quiz: Quiz[]
+  setIsGameEnded: (value: boolean) => void
+  setIsGameStarted: (value: boolean) => void
+  setIsWin: (value: boolean) => void
+  setQuiz: (quiz: Quiz[]) => void
+  setStep: (values: number) => void
   step: number
 }
 
@@ -21,6 +25,7 @@ export const GameContext = () => {
   const [isGameEnded, setIsGameEnded] = useState(false)
   const [isGameStarted, setIsGameStarted] = useState(false)
   const [isWin, setIsWin] = useState(false)
+  const [quiz, setQuiz] = useState(() => getQuiz())
 
   return (
     <Outlet
@@ -29,9 +34,11 @@ export const GameContext = () => {
           isGameEnded,
           isGameStarted,
           isWin,
+          quiz,
           setIsGameEnded,
           setIsGameStarted,
           setIsWin,
+          setQuiz,
           setStep,
           step,
         } satisfies GameContextProps

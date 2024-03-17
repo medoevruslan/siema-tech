@@ -1,14 +1,25 @@
 .wrapper {
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
 
     .container {
         height: 100%;
         padding: 134px 80px 120px;
         background-color: var(--color-black-5);
+        flex-grow: 1;
 
         .questionSection {
             height: 100%;
         }
+    }
+    .priceSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 376px;
+        overflow: hidden;
     }
 }
 

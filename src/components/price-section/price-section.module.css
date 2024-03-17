@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 8px;
 
     .price {
@@ -12,7 +12,9 @@
         svg {
             fill: transparent;
             color: var(--color-black-40);
-            width: 100%;
+            width: inherit;
+            height: inherit;
+            mask-image: url("../../assets/price-option.svg");
         }
 
         &:after{
@@ -39,6 +41,14 @@
         .text {
             left: 50%;
             transform: translateX(-50%);
+        }
+
+        &.completed {
+            color: var(--color-black-40)
+        }
+
+        &.active svg {
+            background-color: var(--color-blue-5);
         }
     }
 }

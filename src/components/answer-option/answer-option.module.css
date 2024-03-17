@@ -7,6 +7,7 @@
             cursor: pointer;
             fill: transparent;
             color: var(--color-black-40);
+            mask-image: url("../../assets/btn-option.svg");
         }
 
         &.selected {

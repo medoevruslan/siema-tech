@@ -2,9 +2,10 @@ import quiz from './data.json'
 
 export type Quiz = {
   answers: Answer
+  completed: boolean
   correct: keyof Answer
-  disabled?: boolean
-  price: string
+  id: string
+  price: number
   question: string
 }
 

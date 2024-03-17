@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { GameContext } from '@/context/game.context'
+import { GameOver } from '@/page/game-over'
 
 import { Game } from './page/game'
 import { Home } from './page/home'
@@ -15,6 +16,10 @@ const publicRoutes = [
       {
         element: <Game />,
         path: '/game',
+      },
+      {
+        element: <GameOver />,
+        path: '/game-over',
       },
     ],
     element: <GameContext />,

@@ -14,16 +14,22 @@ type Story = StoryObj<typeof meta>
 
 export const PriceSectionDefault: Story = {
   args: {
-    prices: getQuiz()
-      .map(q => Number(q.price))
-      .sort((a, b) => b - a),
+    currentOptionId: getQuiz()[0].id,
+    prices: getQuiz().map(q => ({
+      disabled: q.disabled,
+      id: q.id,
+      value: q.price,
+    })),
   },
 }
 
 export const PriceSectionWithDisabledOptions: Story = {
   args: {
-    prices: getQuiz()
-      .map(q => Number(q.price))
-      .sort((a, b) => b - a),
+    currentOptionId: getQuiz()[0].id,
+    prices: getQuiz().map(q => ({
+      disabled: q.disabled,
+      id: q.id,
+      value: q.price,
+    })),
   },
 }
