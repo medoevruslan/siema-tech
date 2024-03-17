@@ -7,7 +7,8 @@
       "c": "Berlin",
       "d": "Rome"
     },
-    "correct": "b"
+    "correct": "b",
+    "price": "500"
   },
   {
     "question": "Which planet is known as the Red Planet?",
@@ -17,7 +18,8 @@
       "c": "Venus",
       "d": "Jupiter"
     },
-    "correct": "a"
+    "correct": "a",
+    "price": "1000"
   },
   {
     "question": "What is the chemical symbol for water?",
@@ -27,7 +29,8 @@
       "c": "NaCl",
       "d": "O2"
     },
-    "correct": "a"
+    "correct": "a",
+    "price": "2000"
   },
   {
     "question": "Who wrote 'Romeo and Juliet'?",
@@ -37,7 +40,8 @@
       "c": "Jane Austen",
       "d": "Leo Tolstoy"
     },
-    "correct": "a"
+    "correct": "a",
+    "price": "4000"
   },
   {
     "question": "Which is the largest mammal?",
@@ -47,7 +51,8 @@
       "c": "Giraffe",
       "d": "Hippopotamus"
     },
-    "correct": "b"
+    "correct": "b",
+    "price": "8000"
   },
   {
     "question": "What is the symbol for the chemical element gold?",
@@ -57,7 +62,8 @@
       "c": "Ag",
       "d": "Go"
     },
-    "correct": "b"
+    "correct": "b",
+    "price": "16000"
   },
   {
     "question": "Who painted the Mona Lisa?",
@@ -67,7 +73,8 @@
       "c": "Vincent van Gogh",
       "d": "Michelangelo"
     },
-    "correct": "a"
+    "correct": "a",
+    "price": "32000"
   },
   {
     "question": "What is the tallest mountain in the world?",
@@ -77,7 +84,8 @@
       "c": "Kangchenjunga",
       "d": "Makalu"
     },
-    "correct": "a"
+    "correct": "a",
+    "price": "64000"
   },
   {
     "question": "Who is known as the father of modern physics?",
@@ -87,7 +95,8 @@
       "c": "Galileo Galilei",
       "d": "Niels Bohr"
     },
-    "correct": "b"
+    "correct": "b",
+    "price": "125000"
   },
   {
     "question": "What is the largest ocean on Earth?",
@@ -97,7 +106,8 @@
       "c": "Arctic Ocean",
       "d": "Pacific Ocean"
     },
-    "correct": "d"
+    "correct": "d",
+    "price": "250000"
   },
   {
     "question": "Who wrote 'To Kill a Mockingbird'?",
@@ -107,7 +117,8 @@
       "c": "Harper Lee",
       "d": "J.K. Rowling"
     },
-    "correct": "c"
+    "correct": "c",
+    "price": "500000"
   },
   {
     "question": "Which country is known as the Land of the Rising Sun?",
@@ -117,217 +128,8 @@
       "c": "Korea",
       "d": "Vietnam"
     },
-    "correct": "b"
-  },
-  {
-    "question": "What is the largest organ in the human body?",
-    "answers": {
-      "a": "Brain",
-      "b": "Skin",
-      "c": "Heart",
-      "d": "Liver"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "Who developed the theory of relativity?",
-    "answers": {
-      "a": "Isaac Newton",
-      "b": "Galileo Galilei",
-      "c": "Albert Einstein",
-      "d": "Stephen Hawking"
-    },
-    "correct": "c"
-  },
-  {
-    "question": "Which gas do plants absorb from the atmosphere?",
-    "answers": {
-      "a": "Carbon Dioxide",
-      "b": "Oxygen",
-      "c": "Nitrogen",
-      "d": "Hydrogen"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "Who invented the telephone?",
-    "answers": {
-      "a": "Thomas Edison",
-      "b": "Alexander Graham Bell",
-      "c": "Nikola Tesla",
-      "d": "Guglielmo Marconi"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "What is the largest desert in the world?",
-    "answers": {
-      "a": "Sahara Desert",
-      "b": "Gobi Desert",
-      "c": "Arabian Desert",
-      "d": "Antarctica"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "Who painted the 'Starry Night'?",
-    "answers": {
-      "a": "Leonardo da Vinci",
-      "b": "Vincent van Gogh",
-      "c": "Pablo Picasso",
-      "d": "Claude Monet"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "What is the smallest prime number?",
-    "answers": {
-      "a": "1",
-      "b": "2",
-      "c": "3",
-      "d": "5"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "Which continent is the least populated?",
-    "answers": {
-      "a": "Asia",
-      "b": "Europe",
-      "c": "Australia",
-      "d": "Antarctica"
-    },
-    "correct": "d"
-  },
-  {
-    "question": "Who discovered penicillin?",
-    "answers": {
-      "a": "Louis Pasteur",
-      "b": "Alexander Fleming",
-      "c": "Marie Curie",
-      "d": "Robert Koch"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "What is the chemical symbol for iron?",
-    "answers": {
-      "a": "Fe",
-      "b": "I",
-      "c": "Ir",
-      "d": "In"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "What is the largest bird in the world?",
-    "answers": {
-      "a": "Ostrich",
-      "b": "Eagle",
-      "c": "Albatross",
-      "d": "Condor"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "Who wrote '1984'?",
-    "answers": {
-      "a": "George Orwell",
-      "b": "Aldous Huxley",
-      "c": "Ray Bradbury",
-      "d": "J.R.R. Tolkien"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "Which is the largest planet in our solar system?",
-    "answers": {
-      "a": "Mercury",
-      "b": "Venus",
-      "c": "Jupiter",
-      "d": "Saturn"
-    },
-    "correct": "c"
-  },
-  {
-    "question": "Who is the author of 'The Great Gatsby'?",
-    "answers": {
-      "a": "Ernest Hemingway",
-      "b": "F. Scott Fitzgerald",
-      "c": "John Steinbeck",
-      "d": "Virginia Woolf"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "Which element is commonly used as a fuel in nuclear reactors?",
-    "answers": {
-      "a": "Uranium",
-      "b": "Plutonium",
-      "c": "Thorium",
-      "d": "Radon"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "Who discovered gravity?",
-    "answers": {
-      "a": "Albert Einstein",
-      "b": "Isaac Newton",
-      "c": "Galileo Galilei",
-      "d": "Nikola Tesla"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "What is the chemical symbol for sodium?",
-    "answers": {
-      "a": "S",
-      "b": "So",
-      "c": "Na",
-      "d": "No"
-    },
-    "correct": "c"
-  },
-  {
-    "question": "What is the largest species of cat?",
-    "answers": {
-      "a": "Lion",
-      "b": "Leopard",
-      "c": "Tiger",
-      "d": "Cheetah"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "Who wrote 'Pride and Prejudice'?",
-    "answers": {
-      "a": "Emily Brontë",
-      "b": "Jane Austen",
-      "c": "Charlotte Brontë",
-      "d": "Mary Shelley"
-    },
-    "correct": "b"
-  },
-  {
-    "question": "Which is the longest river in the world?",
-    "answers": {
-      "a": "Nile",
-      "b": "Amazon",
-      "c": "Yangtze",
-      "d": "Mississippi"
-    },
-    "correct": "a"
-  },
-  {
-    "question": "What is the chemical symbol for silver?",
-    "answers": {
-      "a": "S",
-      "b": "Si",
-      "c": "Ag",
-      "d": "Ar"
-    },
-    "correct": "c"
+    "correct": "b",
+    "price": "1000000"
   }
 ]
 

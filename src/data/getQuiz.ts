@@ -1,8 +1,10 @@
 import quiz from './data.json'
 
-type Quiz = {
+export type Quiz = {
   answers: Answer
   correct: keyof Answer
+  disabled?: boolean
+  price: string
   question: string
 }
 

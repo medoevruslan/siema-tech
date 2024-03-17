@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .question {
+        margin-bottom: 50px;
+    }
+
+    .answers {
+        display: flex;
+        flex-wrap: wrap;
+        width: 850px;
+        gap: 34px;
+
+        .answer svg {
+            background-color: var(--color-white-100);
+        }
+    }
+
+    .variant {
+        font-weight: 900;
+        color: var(--color-blue-100);
+        text-transform: uppercase;
+        margin-right: 5px;
+    }
+}
+

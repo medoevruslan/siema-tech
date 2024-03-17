@@ -1,5 +1,4 @@
 import { AnswerOption } from '@/components/answer-option/answer-option'
-import { Typography } from '@/components/ui/typography'
 import { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
@@ -19,40 +18,34 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const AnswerOptionInactive: Story = {
-  args: {
-    children: <Typography variant={'option'}>Question Option</Typography>,
-  },
-  render: ({ children }) => {
-    return <AnswerOption>{children}</AnswerOption>
+  render: () => {
+    return <AnswerOption>Question Option</AnswerOption>
   },
 }
 
 export const AnswerOptionSelected: Story = {
   args: {
-    children: <Typography variant={'option'}>Question Option</Typography>,
     variant: 'selected',
   },
-  render: ({ children, variant }) => {
-    return <AnswerOption variant={variant}>{children}</AnswerOption>
+  render: ({ variant }) => {
+    return <AnswerOption variant={variant}>Question Option</AnswerOption>
   },
 }
 
 export const AnswerOptionCorrect: Story = {
   args: {
-    children: <Typography variant={'option'}>Question Option</Typography>,
     variant: 'correct',
   },
-  render: ({ children, variant }) => {
-    return <AnswerOption variant={variant}>{children}</AnswerOption>
+  render: ({ variant }) => {
+    return <AnswerOption variant={variant}>Question Option</AnswerOption>
   },
 }
 
 export const AnswerOptionWrong: Story = {
   args: {
-    children: <Typography variant={'option'}>Question Option</Typography>,
     variant: 'wrong',
   },
-  render: ({ children, variant }) => {
-    return <AnswerOption variant={variant}>{children}</AnswerOption>
+  render: ({ variant }) => {
+    return <AnswerOption variant={variant}>Question Option</AnswerOption>
   },
 }

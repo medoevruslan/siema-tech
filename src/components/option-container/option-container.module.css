@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    svg {
+        mask-image: url("../../assets/btn-option.svg");
+    }
+
+    .text {
+        position: absolute;
+        left: 40px;
+
+        &.disabled {
+            color: var(--color-black-40);
+        }
+    }
+}

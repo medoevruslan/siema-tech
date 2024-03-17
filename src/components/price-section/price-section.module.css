@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+    .price {
+        width: 240px;
+        height: 40px;
+
+        svg {
+            fill: transparent;
+            color: var(--color-black-40);
+            width: 100%;
+        }
+
+        &:after{
+            content: '';
+            width: 100px;
+            height: 1px;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--color-black-40);
+        }
+        &:before{
+            content: '';
+            width: 100px;
+            height: 1px;
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--color-black-40);
+        }
+
+        .text {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

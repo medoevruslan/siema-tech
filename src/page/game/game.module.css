@@ -1,0 +1,14 @@
+.wrapper {
+    height: 100vh;
+
+    .container {
+        height: 100%;
+        padding: 134px 80px 120px;
+        background-color: var(--color-black-5);
+
+        .questionSection {
+            height: 100%;
+        }
+    }
+}
+

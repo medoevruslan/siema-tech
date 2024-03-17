@@ -1,15 +1,23 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import { GameContext } from '@/context/game.context'
+
+import { Game } from './page/game'
 import { Home } from './page/home'
 
 const publicRoutes = [
   {
-    element: <Home />,
-    path: '/',
-  },
-  {
-    element: <Game />,
-    path: '/game',
+    children: [
+      {
+        element: <Home />,
+        path: '/',
+      },
+      {
+        element: <Game />,
+        path: '/game',
+      },
+    ],
+    element: <GameContext />,
   },
 ]
 
