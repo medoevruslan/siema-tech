@@ -4,12 +4,14 @@ import { Container } from '@/components/container/container'
 import { PriceSection } from '@/components/price-section/price-section'
 import { QuestionSection } from '@/components/question-section/question-section'
 import { useGameContext } from '@/context/game.context'
-import z from 'zod'
+import { quizSchema } from '@/schema/quiz.schema'
 
 import s from './game.module.css'
 
 export const Game = () => {
   const { isGameEnded, quiz, setIsGameEnded, setQuiz, setStep, step } = useGameContext()
+
+  quizSchema.parse(quiz)
 
   const currentQuiz = quiz[step]
   const prices = quiz.map(q => ({ completed: q?.completed, id: q.id, value: q?.price })) || []
