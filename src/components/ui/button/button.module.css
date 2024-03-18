@@ -8,7 +8,7 @@
   background-color: var(--color-blue-5);
   color: var(--color-white-100) !important;
   text-align: center;
-  transition: .1s background-color linear;
+  transition: 0.1s background-color linear;
   cursor: pointer;
 
   &:hover {
@@ -22,6 +22,4 @@
   &.fullwidth {
     width: 100%;
   }
-
 }
-

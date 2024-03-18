@@ -11,6 +11,8 @@
   }
 
   .option {
+    cursor: pointer;
+
     svg {
       cursor: pointer;
       fill: transparent;
@@ -23,31 +25,37 @@
         fill: var(--color-orange-5);
         color: var(--color-orange-100);
       }
+
       &:after,
       &:before {
         background-color: var(--color-orange-100);
       }
     }
+
     &.correct {
       svg {
         fill: var(--color-green-5);
         color: var(--color-green-100);
       }
+
       &:after,
       &:before {
         background-color: var(--color-green-100);
       }
     }
+
     &.wrong {
       svg {
         fill: var(--color-red-5);
         color: var(--color-red-100);
       }
+
       &:after,
       &:before {
         background-color: var(--color-red-100);
       }
     }
+
     &:after {
       content: '';
       width: 17px;
@@ -58,6 +66,7 @@
       transform: translateY(-50%);
       background-color: var(--color-black-40);
     }
+
     &:before {
       content: '';
       width: 17px;
@@ -80,6 +89,7 @@
       svg {
         color: var(--color-blue-80);
       }
+
       &:before,
       &:after {
         background-color: var(--color-blue-80);

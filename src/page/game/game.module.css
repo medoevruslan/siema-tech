@@ -1,46 +1,45 @@
 .wrapper {
-    height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
+  .container {
+    height: 100%;
+    padding: 134px 80px 120px;
+    background-color: var(--color-black-5);
+    flex-grow: 1;
+
+    .questionSection {
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      overflow: hidden;
+      padding: 24px;
+    }
+  }
+
+  .priceSection {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    width: 376px;
+    overflow: hidden;
 
-    @media(max-width: 768px) {
-        justify-content: center;
+    &.mobile {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: var(--color-black-5);
+      transform: translateY(-1000px);
+
+      &.open {
+        transform: translateY(0);
+      }
     }
-
-
-    .container {
-        height: 100%;
-        padding: 134px 80px 120px;
-        background-color: var(--color-black-5);
-        flex-grow: 1;
-
-        .questionSection {
-            height: 100%;
-        }
-
-        @media(max-width: 768px) {
-            overflow: hidden;
-            padding: 24px;
-        }
-    }
-    .priceSection {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 376px;
-        overflow: hidden;
-
-        &.mobile {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: var(--color-black-5);
-            transform: translateY(-1000px);
-
-            &.open {
-                transform: translateY(0);
-            }
-        }
-    }
+  }
 }
-
