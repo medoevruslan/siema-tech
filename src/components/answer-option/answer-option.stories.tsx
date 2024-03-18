@@ -18,34 +18,26 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const AnswerOptionInactive: Story = {
-  render: () => {
-    return <AnswerOption>Question Option</AnswerOption>
-  },
+  render: () => <AnswerOption>Question Option</AnswerOption>,
 }
 
 export const AnswerOptionSelected: Story = {
   args: {
     variant: 'selected',
   },
-  render: ({ variant }) => {
-    return <AnswerOption variant={variant}>Question Option</AnswerOption>
-  },
+  render: ({ variant }) => <AnswerOption variant={variant}>Question Option</AnswerOption>,
 }
 
 export const AnswerOptionCorrect: Story = {
   args: {
     variant: 'correct',
   },
-  render: ({ variant }) => {
-    return <AnswerOption variant={variant}>Question Option</AnswerOption>
-  },
+  render: ({ variant }) => <AnswerOption variant={variant}>Question Option</AnswerOption>,
 }
 
 export const AnswerOptionWrong: Story = {
   args: {
     variant: 'wrong',
   },
-  render: ({ variant }) => {
-    return <AnswerOption variant={variant}>Question Option</AnswerOption>
-  },
+  render: ({ variant }) => <AnswerOption variant={variant}>Question Option</AnswerOption>,
 }

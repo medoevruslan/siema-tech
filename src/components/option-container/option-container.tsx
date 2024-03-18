@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Typography } from '@/components/ui/typography'
 import clsx from 'clsx'
+import { useMediaQuery } from 'usehooks-ts'
 
 import s from './option-container.module.css'
 
@@ -12,7 +13,11 @@ type Props = {
   textClassName?: string
 }
 
-export const OptionContainer = ({ children, className, disabled, textClassName }: Props) => {
+export function OptionContainer({
+ children, className, disabled, textClassName 
+}: Props) {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   return (
     <div className={clsx(s.container, className)}>
       <svg
@@ -32,10 +37,11 @@ export const OptionContainer = ({ children, className, disabled, textClassName }
       </svg>
       <Typography
         className={clsx(s.text, disabled && s.disabled, textClassName)}
+        mobile={isMobile}
         variant={'option'}
       >
         {children}
       </Typography>
     </div>
-  )
+  );
 }

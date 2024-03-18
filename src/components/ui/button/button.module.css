@@ -5,8 +5,8 @@
   width: 296px;
   padding: 21px 0;
   border-radius: 12px;
-  background-color: var(--color-blue-80);
-  color: var(--color-white-100);
+  background-color: var(--color-blue-5);
+  color: var(--color-white-100) !important;
   text-align: center;
   transition: .1s background-color linear;
   cursor: pointer;
@@ -19,7 +19,7 @@
     background-color: var(--color-blue-120);
   }
 
-  & .fullwidth {
+  &.fullwidth {
     width: 100%;
   }
 

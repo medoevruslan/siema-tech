@@ -1,43 +1,36 @@
-import React from 'react';
-import { FallbackPage } from '@/src/pages/error/fallback';
+import React from 'react'
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-  error: string;
+import { FallbackPage } from '@/page/error/fallback'
+
+type ErrorBoundaryProps = {
+  children?: React.ReactNode
+  error: string
 }
 
-interface ErrorBoundaryState {
-  hasError: boolean;
+type ErrorBoundaryState = {
+  hasError: boolean
 }
 
-class ErrorBoundary extends React.Component<
-  ErrorBoundaryProps,
-  ErrorBoundaryState
-> {
+export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(): ErrorBoundaryState {
-    return { hasError: true };
+    return { hasError: true }
   }
 
   render(): React.ReactNode {
-    const { hasError } = this.state;
-    const { children, error } = this.props;
+    const { hasError } = this.state
+    const { children, error } = this.props
 
     if (hasError) {
       return (
-        <FallbackPage
-          error={error}
-          resetErrorBoundary={() => this.setState({ hasError: false })}
-        />
-      );
+        <FallbackPage error={error} resetErrorBoundary={() => this.setState({ hasError: false })} />
+      )
     }
 
-    return children;
+    return children
   }
 }
-
-export default ErrorBoundary;

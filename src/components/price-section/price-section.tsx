@@ -11,21 +11,23 @@ type Price = {
 
 type Props = {
   currentOptionId: string
+  mobile?: boolean
   prices: Price[]
 }
-export const PriceSection = ({ currentOptionId, prices }: Props) => {
+export function PriceSection({ currentOptionId, mobile, prices }: Props) {
   return (
-    <div className={s.container}>
-      {prices.length &&
-        prices.map(({ completed, id, value }) => (
+    <div className={clsx(s.container, mobile && s.mobile)}>
+      {prices.length
+        && prices.map(({ completed, id, value }) => (
           <OptionContainer
             className={clsx(s.price, completed && s.completed, currentOptionId === id && s.active)}
             key={value}
             textClassName={s.text}
           >
-            ${value.toLocaleString('en-US')}
+            $
+{value.toLocaleString('en-US')}
           </OptionContainer>
         ))}
     </div>
-  )
+  );
 }

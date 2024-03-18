@@ -1,6 +1,5 @@
 import React from 'react'
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
-  /* main layout could include shared elements */
-  return <div>{children}</div>
+export function Layout({ children }: { children: React.ReactNode }) {
+  return <div>{children}</div>;
 }

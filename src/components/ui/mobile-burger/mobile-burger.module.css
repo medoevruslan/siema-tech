@@ -1,0 +1,42 @@
+.container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 99;
+    gap: 3px;
+    right: 20px;
+    top: 20px;
+    width: 23px;
+    height: 20px;
+
+    .line {
+        height: 3px;
+        width: 20px;
+        background-color: var(--color-black-120);
+        border-radius: 3px;
+        transition: transform .2s linear;
+    }
+
+    &.open {
+        gap: 0;
+
+        .line:nth-child(2) {
+            background-color: transparent;
+        }
+
+        .line:nth-child(3) {
+            transform: translateY(-3px) rotate(-45deg);
+        }
+
+        .line:nth-child(1) {
+            transform: translateY(3px) rotate(45deg);
+        }
+    }
+
+    @media(max-width: 768px) {
+        display: flex;
+        align-items: flex-start;
+    }
+}

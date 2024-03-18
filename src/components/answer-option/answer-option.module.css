@@ -2,6 +2,14 @@
     width: 373px;
     height: 72px;
 
+    @media(max-width: 768px) {
+        width: 500px;
+    }
+
+    @media(max-width: 600px) {
+        width: 100%;
+    }
+
     .option {
         svg {
             cursor: pointer;
@@ -56,6 +64,12 @@
             top: 50%;
             transform: translateY(-50%);
             background-color: var(--color-black-40);
+        }
+
+        @media(max-width: 768px) {
+            &:after, &:before {
+                width: 100%;
+            }
         }
 
         &:hover {

@@ -1,31 +1,40 @@
-import { Typography } from '@/src/components/ui/typography';
-import { Button } from '@/src/components/ui/button';
-import { FallbackProps } from 'react-error-boundary';
+import { FallbackProps } from 'react-error-boundary'
 
-export const FallbackPage = ({ error, resetErrorBoundary }: FallbackProps) => {
+import { Container } from '@/components/container/container'
+import { Button } from '@/components/ui/button'
+import { Typography } from '@/components/ui/typography'
+import { useMediaQuery } from 'usehooks-ts'
+
+import s from './fallback.module.css'
+
+export function FallbackPage({ error, resetErrorBoundary }: FallbackProps) {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+
   return (
-    <div className="main-content-container p-5">
-      <div className="page-header mb-4">
-        <Typography variant={'h1'}>Error</Typography>
-        <Typography variant={'subtitle1'}>
+    <Container className={s.container}>
+      <div className={s.header}>
+        <Typography mobile={isMobile} variant={'headline'}>
+          Error
+        </Typography>
+        <Typography mobile={isMobile} variant={'question'}>
           This should not have happened
         </Typography>
       </div>
-      <div className="page-header mb-4">
+      <div className={s.header}>
         <div>
           <p>Something went wrong:</p>
           <pre>
-            <code className="text-warning">{error?.message}</code>
+            <code className={s.textWarning}>{error?.message}</code>
           </pre>
         </div>
       </div>
-      <div className="page-header">
+      <div className={s.header}>
         <div>
-          <Button variant={'outlined'} onClick={resetErrorBoundary}>
+          <Button onClick={resetErrorBoundary} variant={'primary'}>
             Try again
           </Button>
         </div>
       </div>
-    </div>
+    </Container>
   );
-};
+}

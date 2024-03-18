@@ -38,7 +38,7 @@
 .button, .option {
     font-size: var(--font-size-xl);
 
-    &.moblie {
+    &.mobile {
         font-size: var(--font-size-s);
     }
 }

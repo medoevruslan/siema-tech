@@ -23,18 +23,18 @@ type TypographyProps<T extends ElementType> = {
   variant: VariantKey
 } & ComponentPropsWithoutRef<T>
 
-export const Typography = <T extends ElementType>({
+export function Typography<T extends ElementType>({
   children,
   className,
   mobile = false,
   variant,
   ...rest
-}: TypographyProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof TypographyProps<T>>) => {
-  const Component = variantMapping[variant]
+}: TypographyProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof TypographyProps<T>>) {
+  const Component = variantMapping[variant];
 
   return (
     <Component className={clsx(s[variant], mobile && s.mobile, className)} {...rest}>
       {children}
     </Component>
-  )
+  );
 }

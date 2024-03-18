@@ -15,7 +15,9 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:prettier/recommended',
     'plugin:perfectionist/recommended-natural',
-    'plugin:storybook/recommended'
+    'plugin:storybook/recommended',
+    'airbnb',
+    'airbnb/hooks'
   ],
   overrides: [
     {

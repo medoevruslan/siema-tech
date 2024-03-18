@@ -11,10 +11,12 @@ type Props = {
   variant?: 'correct' | 'selected' | 'wrong'
 } & ComponentPropsWithoutRef<'div'>
 
-export const AnswerOption = ({ children, className, variant, ...rest }: Props) => {
+export function AnswerOption({
+ children, className, variant, ...rest 
+}: Props) {
   return (
     <div className={clsx(s.question, className, variant && s[variant])} {...rest}>
       <OptionContainer className={s.option}>{children}</OptionContainer>
     </div>
-  )
+  );
 }

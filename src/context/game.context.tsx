@@ -1,48 +1,52 @@
 import { useState } from 'react'
 import { Outlet, useOutletContext } from 'react-router-dom'
 
-import { Quiz, getQuiz } from '@/data/getQuiz'
+import { getQuiz } from '@/data/getQuiz'
+import { ErrorBoundary } from '@/page/error'
+import { Quiz } from '@/schema/quiz.schema'
 
 type GameContextProps = {
   isGameEnded: boolean
-  isGameStarted: boolean
+  isMobileOpen: boolean
   isWin: boolean
   quiz: Quiz[]
   setIsGameEnded: (value: boolean) => void
-  setIsGameStarted: (value: boolean) => void
+  setIsMobileOpen: (value: boolean) => void
   setIsWin: (value: boolean) => void
   setQuiz: (quiz: Quiz[]) => void
   setStep: (values: number) => void
   step: number
 }
 
-export const useGameContext = () => {
-  return useOutletContext<GameContextProps>()
-}
+export const useGameContext = () => useOutletContext<GameContextProps>()
 
-export const GameContext = () => {
+export function GameContext() {
   const [step, setStep] = useState(0)
-  const [isGameEnded, setIsGameEnded] = useState(false)
-  const [isGameStarted, setIsGameStarted] = useState(false)
-  const [isWin, setIsWin] = useState(false)
-  const [quiz, setQuiz] = useState(() => getQuiz())
+  const [isGameEnded, setIsGameEnded] = useState(false);
+  const [isWin, setIsWin] = useState(false);
+  const [quiz, setQuiz] = useState(() => getQuiz());
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <Outlet
-      context={
-        {
-          isGameEnded,
-          isGameStarted,
-          isWin,
-          quiz,
-          setIsGameEnded,
-          setIsGameStarted,
-          setIsWin,
-          setQuiz,
-          setStep,
-          step,
-        } satisfies GameContextProps
-      }
-    />
-  )
+    <ErrorBoundary error={'Undefined error occured, please refresh the page or press the button'}>
+      <Outlet
+        context={
+          {
+            isGameEnded,
+            isGameStarted,
+            isMobileOpen,
+            isWin,
+            quiz,
+            setIsGameEnded,
+            setIsGameStarted,
+            setIsMobileOpen,
+            setIsWin,
+            setQuiz,
+            setStep,
+            step,
+          } satisfies GameContextProps
+        }
+      />
+    </ErrorBoundary>
+  );
 }

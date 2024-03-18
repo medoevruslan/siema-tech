@@ -6,18 +6,16 @@
     gap: 8px;
 
     .price {
-        width: 240px;
+        max-width: 240px;
         height: 40px;
 
         svg {
             fill: transparent;
             color: var(--color-black-40);
-            width: inherit;
-            height: inherit;
             mask-image: url("../../assets/price-option.svg");
         }
 
-        &:after{
+        &:after {
             content: '';
             width: 100px;
             height: 1px;
@@ -27,7 +25,8 @@
             transform: translateY(-50%);
             background-color: var(--color-black-40);
         }
-        &:before{
+
+        &:before {
             content: '';
             width: 100px;
             height: 1px;
@@ -47,8 +46,31 @@
             color: var(--color-black-40)
         }
 
-        &.active svg {
-            background-color: var(--color-blue-5);
+        &.active {
+            color: var(--color-white-100);
+
+            svg {
+                fill: var(--color-blue-5) !important;
+            }
+        }
+    }
+
+    &.mobile {
+        .price {
+            max-width: 300px;
+            height: 50px;
+
+            &:after, &:before {
+                width: 200px;
+            }
+        }
+
+        width: 100%;
+
+        .price {
+            svg {
+                fill: var(--color-white-100)
+            }
         }
     }
 }

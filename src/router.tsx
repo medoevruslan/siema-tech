@@ -28,6 +28,6 @@ const publicRoutes = [
 
 const router = createBrowserRouter(publicRoutes)
 
-export const Router = () => {
-  return <RouterProvider router={router} />
+export function Router() {
+  return <RouterProvider router={router} />;
 }
