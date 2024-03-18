@@ -10,7 +10,15 @@ You need to have [pnpm](https://pnpm.io/) . A simple `pnpm install` in the root 
 - React
 - React Router
 - Storybook
-- Zod
+- Radix UI
+
+
+### Additional Dependencies:
+
+- Zod for schema validation.
+- Usehooks-ts
+- React-toastify
+- Clsx
 
 ## Development Workflow
 
