@@ -1,4 +1,4 @@
-import { AnswerOption } from '@/components/answer-option';
+import { AnswerOption, OptionVariants } from '@/components/answer-option';
 import { Typography } from '@/components/ui/typography';
 import { Quiz } from '@/schema/quiz.schema';
 import clsx from 'clsx';
@@ -9,9 +9,19 @@ import s from './question-section.module.css';
 type Props = {
   onSelect: (value: string) => void;
   quiz: Quiz;
+  selected: string;
+  showCorrect: OptionVariants;
 };
-export function QuestionSection({ onSelect, quiz }: Props) {
+export function QuestionSection({ onSelect, quiz, selected, showCorrect }: Props) {
   const isMobile = useMediaQuery('(max-width: 768px)');
+
+  const handleSetVariant = (variant: string) => {
+    return selected === variant
+      ? showCorrect === 'inactive'
+        ? 'selected'
+        : showCorrect
+      : undefined;
+  };
 
   return (
     <div className={s.container}>
@@ -24,6 +34,7 @@ export function QuestionSection({ onSelect, quiz }: Props) {
             className={clsx(s.answer)}
             key={variant + answer}
             onClick={() => onSelect(variant)}
+            variant={handleSetVariant(variant)}
           >
             <span className={s.variant}>{variant}</span>
             {answer}

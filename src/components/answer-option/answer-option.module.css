@@ -1,85 +1,89 @@
 .question {
-    width: 373px;
-    height: 72px;
+  width: 373px;
+  height: 72px;
 
-    @media(max-width: 768px) {
-        width: 500px;
+  @media (max-width: 768px) {
+    width: 500px;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  .option {
+    svg {
+      cursor: pointer;
+      fill: transparent;
+      color: var(--color-black-40);
+      mask-image: url('../../assets/btn-option.svg');
     }
 
-    @media(max-width: 600px) {
+    &.selected {
+      svg {
+        fill: var(--color-orange-5);
+        color: var(--color-orange-100);
+      }
+      &:after,
+      &:before {
+        background-color: var(--color-orange-100);
+      }
+    }
+    &.correct {
+      svg {
+        fill: var(--color-green-5);
+        color: var(--color-green-100);
+      }
+      &:after,
+      &:before {
+        background-color: var(--color-green-100);
+      }
+    }
+    &.wrong {
+      svg {
+        fill: var(--color-red-5);
+        color: var(--color-red-100);
+      }
+      &:after,
+      &:before {
+        background-color: var(--color-red-100);
+      }
+    }
+    &:after {
+      content: '';
+      width: 17px;
+      height: 1px;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-black-40);
+    }
+    &:before {
+      content: '';
+      width: 17px;
+      height: 1px;
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-black-40);
+    }
+
+    @media (max-width: 768px) {
+      &:after,
+      &:before {
         width: 100%;
+      }
     }
 
-    .option {
-        svg {
-            cursor: pointer;
-            fill: transparent;
-            color: var(--color-black-40);
-            mask-image: url("../../assets/btn-option.svg");
-        }
-
-        &.selected {
-            svg {
-                fill: var(--color-orange-5);
-                color: var(--color-orange-100);
-            }
-            &:after, &:before {
-                background-color: var(--color-orange-100);;
-            }
-        }
-        &.correct  {
-            svg {
-                fill: var(--color-green-5);
-                color: var(--color-green-100);
-            }
-            &:after, &:before {
-                background-color: var(--color-green-100);
-            }
-        }
-        &.wrong  {
-            svg {
-                fill: var(--color-red-5);
-                color: var(--color-red-100);
-            }
-            &:after, &:before {
-                background-color: var(--color-red-100);
-            }
-        }
-        &:after{
-            content: '';
-            width: 17px;
-            height: 1px;
-            position: absolute;
-            left: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: var(--color-black-40);
-        }
-        &:before{
-            content: '';
-            width: 17px;
-            height: 1px;
-            position: absolute;
-            right: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: var(--color-black-40);
-        }
-
-        @media(max-width: 768px) {
-            &:after, &:before {
-                width: 100%;
-            }
-        }
-
-        &:hover {
-            svg {
-                color: var(--color-blue-80);
-            }
-            &:before, &:after {
-                background-color: var(--color-blue-80);;
-            }
-        }
+    &:hover {
+      svg {
+        color: var(--color-blue-80);
+      }
+      &:before,
+      &:after {
+        background-color: var(--color-blue-80);
+      }
     }
-
+  }
 }
