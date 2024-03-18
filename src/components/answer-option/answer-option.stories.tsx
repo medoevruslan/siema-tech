@@ -1,4 +1,5 @@
 import { AnswerOption } from '@/components/answer-option/answer-option';
+import * as RadioGroup from '@radix-ui/react-radio-group';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
@@ -18,26 +19,54 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const AnswerOptionInactive: Story = {
-  render: () => <AnswerOption>Question Option</AnswerOption>,
+  args: {
+    value: 'a',
+  },
+  render: ({ value }) => (
+    <RadioGroup.Root>
+      <AnswerOption value={value}>Question Option</AnswerOption>
+    </RadioGroup.Root>
+  ),
 };
 
 export const AnswerOptionSelected: Story = {
   args: {
+    value: 'a',
     variant: 'selected',
   },
-  render: ({ variant }) => <AnswerOption variant={variant}>Question Option</AnswerOption>,
+  render: ({ value, variant }) => (
+    <RadioGroup.Root>
+      <AnswerOption value={value} variant={variant}>
+        Question Option
+      </AnswerOption>
+    </RadioGroup.Root>
+  ),
 };
 
 export const AnswerOptionCorrect: Story = {
   args: {
+    value: 'a',
     variant: 'correct',
   },
-  render: ({ variant }) => <AnswerOption variant={variant}>Question Option</AnswerOption>,
+  render: ({ value, variant }) => (
+    <RadioGroup.Root>
+      <AnswerOption value={value} variant={variant}>
+        Question Option
+      </AnswerOption>
+    </RadioGroup.Root>
+  ),
 };
 
 export const AnswerOptionWrong: Story = {
   args: {
+    value: 'a',
     variant: 'wrong',
   },
-  render: ({ variant }) => <AnswerOption variant={variant}>Question Option</AnswerOption>,
+  render: ({ value, variant }) => (
+    <RadioGroup.Root>
+      <AnswerOption value={value} variant={variant}>
+        Question Option
+      </AnswerOption>
+    </RadioGroup.Root>
+  ),
 };

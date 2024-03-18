@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { OptionVariants } from '@/components/answer-option';
+import { OptionViews } from '@/components/answer-option';
 import { useGameContext } from '@/context/game.context';
 
 export const useSelectOption = () => {
   const [selectedOption, setSelectedOption] = useState('');
-  const [showCorrect, setShowCorrect] = useState<OptionVariants>('inactive');
+  const [showCorrect, setShowCorrect] = useState<OptionViews>('inactive');
 
   const { quiz, setIsGameEnded, setIsWin, setQuiz, setStep, step } = useGameContext();
 
