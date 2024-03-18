@@ -1,15 +1,15 @@
-import { AnswerOption } from '@/components/answer-option'
-import { Typography } from '@/components/ui/typography'
-import { Quiz } from '@/schema/quiz.schema'
-import clsx from 'clsx'
-import { useMediaQuery } from 'usehooks-ts'
+import { AnswerOption } from '@/components/answer-option';
+import { Typography } from '@/components/ui/typography';
+import { Quiz } from '@/schema/quiz.schema';
+import clsx from 'clsx';
+import { useMediaQuery } from 'usehooks-ts';
 
-import s from './question-section.module.css'
+import s from './question-section.module.css';
 
 type Props = {
-  onSelect: (value: string) => void
-  quiz: Quiz
-}
+  onSelect: (value: string) => void;
+  quiz: Quiz;
+};
 export function QuestionSection({ onSelect, quiz }: Props) {
   const isMobile = useMediaQuery('(max-width: 768px)');
 

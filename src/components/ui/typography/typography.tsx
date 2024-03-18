@@ -1,8 +1,8 @@
-import React, { CSSProperties, ComponentPropsWithoutRef, ElementType } from 'react'
+import React, { CSSProperties, ComponentPropsWithoutRef, ElementType } from 'react';
 
-import clsx from 'clsx'
+import clsx from 'clsx';
 
-import s from './typography.module.css'
+import s from './typography.module.css';
 
 const variantMapping = {
   button: 'p',
@@ -11,17 +11,17 @@ const variantMapping = {
   link2: 'a',
   option: 'p',
   question: 'h6',
-} as const
+} as const;
 
-type VariantKey = keyof typeof variantMapping
+type VariantKey = keyof typeof variantMapping;
 
 type TypographyProps<T extends ElementType> = {
-  children: React.ReactNode
-  className?: string
-  mobile?: boolean
-  style?: CSSProperties
-  variant: VariantKey
-} & ComponentPropsWithoutRef<T>
+  children: React.ReactNode;
+  className?: string;
+  mobile?: boolean;
+  style?: CSSProperties;
+  variant: VariantKey;
+} & ComponentPropsWithoutRef<T>;
 
 export function Typography<T extends ElementType>({
   children,

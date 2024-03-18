@@ -1,7 +1,7 @@
-import { useGameContext } from '@/context/game.context'
-import clsx from 'clsx'
+import { useGameContext } from '@/context/game.context';
+import clsx from 'clsx';
 
-import s from './mobile-burger.module.css'
+import s from './mobile-burger.module.css';
 
 export function MobileBurger() {
   const { isMobileOpen, setIsMobileOpen } = useGameContext();

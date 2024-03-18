@@ -1,21 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import { Typography } from '@/components/ui/typography'
-import clsx from 'clsx'
-import { useMediaQuery } from 'usehooks-ts'
+import { Typography } from '@/components/ui/typography';
+import clsx from 'clsx';
+import { useMediaQuery } from 'usehooks-ts';
 
-import s from './option-container.module.css'
+import s from './option-container.module.css';
 
 type Props = {
-  children: React.ReactNode
-  className?: string
-  disabled?: boolean
-  textClassName?: string
-}
+  children: React.ReactNode;
+  className?: string;
+  disabled?: boolean;
+  textClassName?: string;
+};
 
-export function OptionContainer({
- children, className, disabled, textClassName 
-}: Props) {
+export function OptionContainer({ children, className, disabled, textClassName }: Props) {
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (

@@ -1,1 +1,1 @@
-export * from './mobile-burger'
+export * from './mobile-burger';

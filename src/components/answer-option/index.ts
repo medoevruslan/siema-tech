@@ -1,1 +1,1 @@
-export * from './answer-option'
+export * from './answer-option';

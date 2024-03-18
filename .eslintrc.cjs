@@ -16,8 +16,6 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:perfectionist/recommended-natural',
     'plugin:storybook/recommended',
-    'airbnb',
-    'airbnb/hooks'
   ],
   overrides: [
     {
@@ -45,6 +43,7 @@ module.exports = {
       'error',
       { css: 'always', json: 'always', scss: 'always', svg: 'always' },
     ],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     'import/no-duplicates': 'off',
     'import/order': 'off',
     'import/prefer-default-export': 'off',

@@ -1,11 +1,11 @@
-import { FallbackProps } from 'react-error-boundary'
+import { FallbackProps } from 'react-error-boundary';
 
-import { Container } from '@/components/container/container'
-import { Button } from '@/components/ui/button'
-import { Typography } from '@/components/ui/typography'
-import { useMediaQuery } from 'usehooks-ts'
+import { Container } from '@/components/container/container';
+import { Button } from '@/components/ui/button';
+import { Typography } from '@/components/ui/typography';
+import { useMediaQuery } from 'usehooks-ts';
 
-import s from './fallback.module.css'
+import s from './fallback.module.css';
 
 export function FallbackPage({ error, resetErrorBoundary }: FallbackProps) {
   const isMobile = useMediaQuery('(max-width: 768px)');

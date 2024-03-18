@@ -1,8 +1,8 @@
-import { ComponentProps } from 'react'
+import { ComponentProps } from 'react';
 
-import clsx from 'clsx'
+import clsx from 'clsx';
 
-import s from './container.module.css'
+import s from './container.module.css';
 
 export function Container(props: ComponentProps<'div'>) {
   return (
