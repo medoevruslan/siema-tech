@@ -31,8 +31,6 @@ export function Game() {
     return <Navigate to={'/error'} />;
   }
 
-  console.log(step);
-
   const currentQuiz = quiz[step];
   const prices = quiz.map(q => ({ completed: q?.completed, id: q.id, value: q?.price })) || [];
 
