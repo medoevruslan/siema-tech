@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   argTypes: {
-    variant: {
+    view: {
       control: { type: 'radio' },
       options: ['correct', 'wrong', 'selected'],
     },
@@ -32,11 +32,11 @@ export const AnswerOptionInactive: Story = {
 export const AnswerOptionSelected: Story = {
   args: {
     value: 'a',
-    variant: 'selected',
+    view: 'selected',
   },
-  render: ({ value, variant }) => (
+  render: ({ value, view }) => (
     <RadioGroup.Root>
-      <AnswerOption value={value} variant={variant}>
+      <AnswerOption value={value} view={view}>
         Question Option
       </AnswerOption>
     </RadioGroup.Root>
@@ -46,11 +46,11 @@ export const AnswerOptionSelected: Story = {
 export const AnswerOptionCorrect: Story = {
   args: {
     value: 'a',
-    variant: 'correct',
+    view: 'correct',
   },
-  render: ({ value, variant }) => (
+  render: ({ value, view }) => (
     <RadioGroup.Root>
-      <AnswerOption value={value} variant={variant}>
+      <AnswerOption value={value} view={view}>
         Question Option
       </AnswerOption>
     </RadioGroup.Root>
@@ -60,11 +60,11 @@ export const AnswerOptionCorrect: Story = {
 export const AnswerOptionWrong: Story = {
   args: {
     value: 'a',
-    variant: 'wrong',
+    view: 'wrong',
   },
-  render: ({ value, variant }) => (
+  render: ({ value, view }) => (
     <RadioGroup.Root>
-      <AnswerOption value={value} variant={variant}>
+      <AnswerOption value={value} view={view}>
         Question Option
       </AnswerOption>
     </RadioGroup.Root>
