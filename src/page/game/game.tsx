@@ -31,14 +31,14 @@ export function Game() {
     return <Navigate to={'/error'} />;
   }
 
+  console.log(step);
+
   const currentQuiz = quiz[step];
   const prices = quiz.map(q => ({ completed: q?.completed, id: q.id, value: q?.price })) || [];
 
   const handleSelectOption = (value: string) => {
-    if (step === quiz.length) {
+    if (step === quiz.length - 1) {
       setIsWin(true);
-
-      return;
     }
     if (currentQuiz.correct === value) {
       setQuiz(quiz.map(q => (q.id === currentQuiz.id ? { ...q, completed: true } : q)));
@@ -61,7 +61,7 @@ export function Game() {
         </article>
       </Container>
       <article className={clsx(s.priceSection, isMobile && s.mobile, isMobileOpen && s.open)}>
-        <PriceSection currentOptionId={currentQuiz.id} mobile={isMobile} prices={prices} />
+        <PriceSection currentOptionId={currentQuiz?.id} mobile={isMobile} prices={prices} />
       </article>
     </section>
   );

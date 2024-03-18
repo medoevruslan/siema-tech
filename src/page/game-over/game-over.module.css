@@ -1,47 +1,44 @@
 .gameOver {
-    position: relative;
-    background-color: var(--color-black-5);
-    height: 100vh;
+  position: relative;
+  background-color: var(--color-black-5);
+  height: 100vh;
 
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    margin-bottom: 64px;
+  }
+
+  .heroImage {
+    max-width: 100%;
+  }
+
+  .totalScore {
+    color: var(--color-black-100);
+  }
+
+  @media (max-width: 1300px) {
     .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .heading {
-        margin-bottom: 64px;
-    }
-
-    .heroImage {
-        max-width: 100%;
+      flex-direction: column;
     }
 
     .totalScore {
-        color: var(--color-black-100);
+      margin-top: 32px;
+      text-align: center;
     }
 
-    @media (max-width: 1300px) {
-        .container {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .totalScore {
-            margin-top: 32px;
-            text-align: center;
-        }
-
-        .heading {
-            text-align: center;
-            margin: 24px 0 102px;
-        }
-
-        .startBtn {
-            margin: 0 auto;
-        }
+    .heading {
+      text-align: center;
+      margin: 24px 0 102px;
     }
+
+    .startBtn {
+      margin: 0 auto;
+    }
+  }
 }
-
-
