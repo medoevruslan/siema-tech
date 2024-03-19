@@ -17,18 +17,4 @@ export const quizSchema = z.array(
   })
 );
 
-export type Quiz = {
-  answers: Answer;
-  completed: boolean;
-  correct: keyof Answer;
-  id: string;
-  price: number;
-  question: string;
-};
-
-type Answer = {
-  a: string;
-  b: string;
-  c: string;
-  d: string;
-};
+export type Quiz = z.infer<typeof quizSchema>;
